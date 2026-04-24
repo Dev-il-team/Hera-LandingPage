@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hera – Smart Home Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9,22 9,12 15,12 15,22"/>
+      </svg>
+    </div>
+    HERA
+  </div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#servicios" data-i18n="nav.services">Servicios</a>
+      <a href="#beneficios" data-i18n="nav.benefits">Beneficios</a>
+      <a href="#planes" data-i18n="nav.plans">Planes</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      <a href="#contacto" class="btn-nav" data-i18n="nav.demo">Solicitar Demo</a>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="grid-lines"></div>
+  <div class="hero-content fade-in">
+    <div class="hero-badge">
+      <div class="dot"></div>
+      <span data-i18n="hero.badge">Smart Home Platform · Ciclo 2026-1</span>
+    </div>
+    <h1 data-i18n="hero.title">Controla tu hogar<br/><span>inteligente</span> desde<br/>un solo lugar</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Hera centraliza todos tus dispositivos IoT — iluminación, seguridad, climatización y más — en una plataforma web unificada, intuitiva y segura.</p>
+    <div class="hero-ctas">
+      <a href="#contacto" class="btn-primary" data-i18n="hero.cta1">Solicitar Demo</a>
+      <a href="#servicios" class="btn-secondary" data-i18n="hero.cta2">Conocer más →</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">+25B</div><div class="stat-label" data-i18n="hero.stat1">Dispositivos IoT mundiales</div></div>
+      <div><div class="stat-num">1</div><div class="stat-label" data-i18n="hero.stat2">Plataforma unificada</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label" data-i18n="hero.stat3">Control remoto</div></div>
+    </div>
+  </div>
+  <div class="hero-visual fade-in" style="transition-delay:0.2s">
+    <div class="dashboard-card">
+      <div class="dash-header">
+        <span class="dash-title" data-i18n="dash.title">Mi Hogar · Panel Central</span>
+        <span class="dash-status"><span class="dot"></span>&nbsp;<span data-i18n="dash.online">En línea</span></span>
+      </div>
+      <div class="dash-grid">
+        <div class="device-tile on"><div class="device-ico">💡</div><div class="device-name" data-i18n="dash.d1">Iluminación Sala</div><div class="device-state on" data-i18n="dash.on">Encendido</div></div>
+        <div class="device-tile"><div class="device-ico">🔒</div><div class="device-name" data-i18n="dash.d2">Cerradura Principal</div><div class="device-state on" style="color:var(--green)" data-i18n="dash.locked">Cerrada</div></div>
+        <div class="device-tile on"><div class="device-ico">🌡️</div><div class="device-name" data-i18n="dash.d3">Climatización</div><div class="device-state on">22°C</div></div>
+        <div class="device-tile"><div class="device-ico">📷</div><div class="device-name" data-i18n="dash.d4">Cámara Entrada</div><div class="device-state on" style="color:var(--green)" data-i18n="dash.active">Activa</div></div>
+      </div>
+      <div class="bar-label"><span data-i18n="dash.energy">Consumo este mes</span><span style="color:var(--gold)">87 / 150 kWh</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:58%"></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="servicios">
+  <div class="services-header fade-in">
+    <div class="section-tag" data-i18n="sv.tag">Servicios</div>
+    <h2 data-i18n="sv.title">Todo lo que necesitas para tu <span>smart home</span></h2>
+    <p class="section-sub" data-i18n="sv.sub">Desde el control remoto hasta la automatización avanzada, Hera gestiona cada aspecto de tu hogar inteligente.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in"><div class="service-icon">🏠</div><h3 data-i18n="sv.1t">Panel Central (Dashboard)</h3><p data-i18n="sv.1d">Vista unificada del estado de tu hogar en tiempo real. Controla todos tus dispositivos desde una sola pantalla, sin importar la marca.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">🔐</div><h3 data-i18n="sv.2t">Seguridad Inteligente</h3><p data-i18n="sv.2d">Monitoreo de cámaras, sensores de movimiento, cerraduras electrónicas y alertas instantáneas ante intrusiones detectadas.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">⚡</div><h3 data-i18n="sv.3t">Análisis Energético</h3><p data-i18n="sv.3d">Reportes de consumo por dispositivo, gráficos mensuales comparativos y metas de ahorro personalizadas en kWh.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">🤖</div><h3 data-i18n="sv.4t">Automatización y Rutinas</h3><p data-i18n="sv.4d">Programa rutinas horarias, activa el Modo Ausencia con un clic y configura escenas personalizadas sin conocimientos técnicos.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">🌡️</div><h3 data-i18n="sv.5t">Control de Climatización</h3><p data-i18n="sv.5d">Ajusta la temperatura remotamente, programa horarios y crea confort antes de llegar a casa desde cualquier lugar.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">📱</div><h3 data-i18n="sv.6t">Acceso Multiplataforma</h3><p data-i18n="sv.6d">Plataforma web 100% responsive, accesible desde cualquier dispositivo con conexión a internet. Sin app adicional requerida.</p></div>
+  </div>
+</section>
+
+
+<section id="beneficios">
+  <div class="benefits-layout">
+    <div class="fade-in">
+      <div class="section-tag" data-i18n="bn.tag">Beneficios</div>
+      <h2 data-i18n="bn.title">¿Por qué elegir <span>Hera</span>?</h2>
+      <p class="section-sub" data-i18n="bn.sub">Diseñada para simplificar tu vida. Una sola plataforma que elimina la fragmentación y te da control total.</p>
+      <div class="benefits-list">
+        <div class="benefit-item"><div class="benefit-check">✓</div><div><h4 data-i18n="bn.1t">Centralización total</h4><p data-i18n="bn.1d">Gestiona dispositivos de distintas marcas desde un único panel. Adiós a las múltiples aplicaciones.</p></div></div>
+        <div class="benefit-item"><div class="benefit-check">✓</div><div><h4 data-i18n="bn.2t">Interfaz intuitiva</h4><p data-i18n="bn.2d">Diseñada para usuarios sin conocimientos técnicos. El 90% completa tareas básicas sin asistencia.</p></div></div>
+        <div class="benefit-item"><div class="benefit-check">✓</div><div><h4 data-i18n="bn.3t">Ahorro energético</h4><p data-i18n="bn.3d">Visualiza y controla tu consumo. La automatización puede reducir hasta un 30% tu gasto en energía.</p></div></div>
+        <div class="benefit-item"><div class="benefit-check">✓</div><div><h4 data-i18n="bn.4t">Seguridad en tiempo real</h4><p data-i18n="bn.4d">Alertas instantáneas y monitoreo continuo para que tu hogar esté protegido en todo momento.</p></div></div>
+      </div>
+    </div>
+    <div class="fade-in" style="transition-delay:0.15s">
+      <div class="mini-dash">
+        <div class="mini-dash-title" data-i18n="bn.report">Reporte de Consumo · Abril 2026</div>
+        <div class="energy-row"><span class="energy-device">💡 <span data-i18n="bn.e1">Iluminación</span></span><span class="energy-kwh">32 kWh</span><span class="energy-pct">37%</span></div>
+        <div class="bar-track" style="margin-bottom:12px"><div class="bar-fill" style="width:37%"></div></div>
+        <div class="energy-row"><span class="energy-device">🌡️ <span data-i18n="bn.e2">Climatización</span></span><span class="energy-kwh">28 kWh</span><span class="energy-pct">32%</span></div>
+        <div class="bar-track" style="margin-bottom:12px"><div class="bar-fill" style="width:32%;background:linear-gradient(90deg,var(--blue),var(--green))"></div></div>
+        <div class="energy-row"><span class="energy-device">☕ <span data-i18n="bn.e3">Electrodomésticos</span></span><span class="energy-kwh">18 kWh</span><span class="energy-pct">21%</span></div>
+        <div class="bar-track" style="margin-bottom:12px"><div class="bar-fill" style="width:21%;background:linear-gradient(90deg,var(--amber),var(--gold))"></div></div>
+        <div class="energy-row"><span class="energy-device">📷 <span data-i18n="bn.e4">Seguridad</span></span><span class="energy-kwh">9 kWh</span><span class="energy-pct">10%</span></div>
+        <div class="bar-track" style="margin-bottom:20px"><div class="bar-fill" style="width:10%;background:linear-gradient(90deg,var(--green),#34d399)"></div></div>
+        <div class="saving-box"><div class="num">-23%</div><div class="label" data-i18n="bn.saving">Ahorro vs. mes anterior gracias a automatización</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="planes">
+  <div class="plans-header fade-in">
+    <div class="section-tag" data-i18n="pl.tag">Planes</div>
+    <h2 data-i18n="pl.title">Elige tu plan <span>Hera</span></h2>
+    <p class="section-sub" style="margin:0 auto" data-i18n="pl.sub">Empieza gratis y escala cuando necesites funcionalidades avanzadas.</p>
+  </div>
+  <div class="plans-grid">
+    <div class="plan-card fade-in">
+      <div class="plan-name" data-i18n="pl.bn">Plan Básico</div>
+      <div class="plan-price"><sup>S/</sup>0<span data-i18n="pl.mo">/mes</span></div>
+      <p class="plan-desc" data-i18n="pl.bd">Ideal para empezar a gestionar tu hogar inteligente sin compromisos.</p>
+      <ul class="plan-features">
+        <li data-i18n="pl.f1">Dashboard central de control</li>
+        <li data-i18n="pl.f2">Gestión de hasta 5 dispositivos</li>
+        <li data-i18n="pl.f3">Control remoto básico</li>
+        <li data-i18n="pl.f4">Notificaciones de seguridad</li>
+        <li class="na" data-i18n="pl.f5">Rutinas avanzadas</li>
+        <li class="na" data-i18n="pl.f6">Reportes históricos</li>
+        <li class="na" data-i18n="pl.f7">Soporte prioritario</li>
+      </ul>
+      <a href="#contacto" class="btn-plan outline" data-i18n="pl.bc">Comenzar gratis</a>
+    </div>
+    <div class="plan-card featured fade-in" style="transition-delay:0.1s">
+      <div class="plan-badge" data-i18n="pl.rec">RECOMENDADO</div>
+      <div class="plan-name" data-i18n="pl.pn">Plan Premium</div>
+      <div class="plan-price"><sup>S/</sup>49<span data-i18n="pl.mo">/mes</span></div>
+      <p class="plan-desc" data-i18n="pl.pd">Para usuarios avanzados y empresas de domótica que necesitan el control total.</p>
+      <ul class="plan-features">
+        <li data-i18n="pl.f1">Dashboard central de control</li>
+        <li data-i18n="pl.pf2">Dispositivos ilimitados</li>
+        <li data-i18n="pl.pf3">Control remoto avanzado</li>
+        <li data-i18n="pl.f4">Notificaciones de seguridad</li>
+        <li data-i18n="pl.f5">Rutinas avanzadas</li>
+        <li data-i18n="pl.f6">Reportes históricos</li>
+        <li data-i18n="pl.f7">Soporte prioritario</li>
+      </ul>
+      <a href="#contacto" class="btn-plan solid" data-i18n="pl.pc">Solicitar Demo</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="contacto">
+  <div class="contact-inner">
+    <div class="section-tag" data-i18n="ct.tag">Contacto</div>
+    <h2 data-i18n="ct.title">¿Listo para modernizar<br/>tu <span>hogar</span>?</h2>
+    <p class="section-sub" style="margin:0 auto 40px" data-i18n="ct.sub">Completa el formulario y un especialista de Hera se pondrá en contacto contigo a la brevedad.</p>
+    <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group"><label data-i18n="ct.lname">NOMBRE COMPLETO</label><input id="inp-name" type="text" placeholder="Ej. Juan García" required /></div>
+        <div class="form-group"><label data-i18n="ct.lemail">CORREO ELECTRÓNICO</label><input type="email" placeholder="tu@correo.com" required /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label data-i18n="ct.lphone">TELÉFONO</label><input type="tel" placeholder="+51 999 000 000" /></div>
+        <div class="form-group">
+          <label data-i18n="ct.lplan">PLAN DE INTERÉS</label>
+          <select>
+            <option data-i18n="ct.o1">Plan Básico (Gratis)</option>
+            <option data-i18n="ct.o2">Plan Premium (S/ 49/mes)</option>
+            <option data-i18n="ct.o3">Plan Empresarial / Domótica</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit" data-i18n="ct.send">Enviar solicitud →</button>
+    </form>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:12px">
+        <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div>
+        HERA
+      </div>
+      <p data-i18n="ft.brand">Plataforma web centralizada para la gestión integral de hogares inteligentes mediante soluciones IoT. Desarrollado por Dev-il-team · UPC 2026-1.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="ft.col1">Plataforma</h4>
+      <a href="#servicios" data-i18n="nav.services">Servicios</a>
+      <a href="#beneficios" data-i18n="nav.benefits">Beneficios</a>
+      <a href="#planes" data-i18n="nav.plans">Planes</a>
+      <a href="#contacto" data-i18n="nav.demo">Demo</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="ft.col2">Startup</h4>
+      <a href="#">Dev-il-team</a>
+      <a href="#" data-i18n="ft.about">Sobre nosotros</a>
+      <a href="#" data-i18n="ft.team">Integrantes</a>
+      <a href="#">UPC · Ing. Software</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="ft.col3">Recursos</h4>
+      <a href="https://orviboperu.com.pe/" target="_blank">Orvibo Perú</a>
+      <a href="https://smarthouseperu.com/" target="_blank">Smart House Perú</a>
+      <a href="https://www.e-activa.com/" target="_blank">E-Activa</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="ft.copy">© 2026 Hera – Smart Home HERA · Dev-il-team · Todos los derechos reservados</span>
+    <a href="#" data-i18n="ft.privacy">Política de privacidad</a>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>
