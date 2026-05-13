@@ -33,11 +33,10 @@ const T = {
     "pl.bc":"Comenzar gratis","pl.rec":"RECOMENDADO",
     "pl.pn":"Plan Premium","pl.pd":"Para usuarios avanzados y empresas de domótica que necesitan el control total.",
     "pl.pf2":"Dispositivos ilimitados","pl.pf3":"Control remoto avanzado","pl.pc":"Solicitar Demo",
-    "ct.tag":"Contacto","ct.title":"¿Listo para modernizar<br/>tu <span>hogar</span>?",
-    "ct.sub":"Completa el formulario y un especialista de Hera se pondrá en contacto contigo a la brevedad.",
-    "ct.lname":"NOMBRE COMPLETO","ct.lemail":"CORREO ELECTRÓNICO","ct.lphone":"TELÉFONO","ct.lplan":"PLAN DE INTERÉS",
-    "ct.o1":"Plan Básico (Gratis)","ct.o2":"Plan Premium (S/ 49/mes)","ct.o3":"Plan Empresarial / Domótica",
-    "ct.send":"Enviar solicitud →","ct.ok":"✓ ¡Solicitud enviada!",
+    "ct.tag":"Acceso","ct.title":"¿Listo para modernizar<br/>tu <span>hogar</span>?",
+    "ct.sub":"Nuestra plataforma ya está disponible. Accede ahora y empieza a controlar tu hogar inteligente desde un solo lugar.",
+    "ct.cta1":"Ingresar a la plataforma →","ct.cta2":"Crear cuenta gratis",
+    "ct.note":"🚧 Plataforma en desarrollo · La URL será actualizada próximamente",
     "ft.brand":"Plataforma web centralizada para la gestión integral de hogares inteligentes mediante soluciones IoT. Desarrollado por Dev-il-team · UPC 2026-1.",
     "ft.col1":"Plataforma","ft.col2":"Startup","ft.col3":"Recursos",
     "ft.about":"Sobre nosotros","ft.team":"Integrantes",
@@ -77,11 +76,10 @@ const T = {
     "pl.bc":"Start for free","pl.rec":"RECOMMENDED",
     "pl.pn":"Premium Plan","pl.pd":"For advanced users and smart home companies that need total control.",
     "pl.pf2":"Unlimited devices","pl.pf3":"Advanced remote control","pl.pc":"Request Demo",
-    "ct.tag":"Contact","ct.title":"Ready to upgrade<br/>your <span>home</span>?",
-    "ct.sub":"Fill out the form and a Hera specialist will get in touch with you shortly.",
-    "ct.lname":"FULL NAME","ct.lemail":"EMAIL ADDRESS","ct.lphone":"PHONE","ct.lplan":"PLAN OF INTEREST",
-    "ct.o1":"Basic Plan (Free)","ct.o2":"Premium Plan (S/ 49/mo)","ct.o3":"Business / Smart Home Company",
-    "ct.send":"Send request →","ct.ok":"✓ Request sent!",
+    "ct.tag":"Access","ct.title":"Ready to upgrade<br/>your <span>home</span>?",
+    "ct.sub":"Our platform is now available. Log in and start controlling your smart home from one place.",
+    "ct.cta1":"Go to platform →","ct.cta2":"Create free account",
+    "ct.note":"🚧 Platform in development · URL will be updated soon",
     "ft.brand":"Centralized web platform for comprehensive smart home management through IoT solutions. Developed by Dev-il-team · UPC 2026-1.",
     "ft.col1":"Platform","ft.col2":"Startup","ft.col3":"Resources",
     "ft.about":"About us","ft.team":"Team",
@@ -104,13 +102,6 @@ function setLang(l) {
   if (nameInput) nameInput.placeholder = l === 'es' ? 'Ej. Juan García' : 'e.g. John Smith';
 }
 
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.btn-submit');
-  btn.textContent = T[lang]['ct.ok'];
-  btn.style.background = 'var(--green)';
-  setTimeout(() => { btn.innerHTML = T[lang]['ct.send']; btn.style.background = ''; }, 3000);
-}
 
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
